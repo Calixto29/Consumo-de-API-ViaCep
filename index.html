@@ -5,59 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consumo de API ViaCEP</title>
+    <script src="logica.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>Consulta de endereço</h1>        
-   
-    <input type="number" placeholder="Digite seu CEP aqui" id="cep"/>
+    <center>
+    <img src="BuscaCep.png" width="400" height="300">
+    </center>   
+
+    <input type="text" placeholder="Digite seu CEP aqui" id="cep"/>
 
     <button onclick="consultaCep()">Consultar CEP</button>    
 
     <!--Div onde fica o resultado-->
-    <div id="consulta">
-        <p>Resultado aqui</p>
-    </div>
-
-    <script>
-
-        /* Chama a função*/
-        function consultaCep() {
-            
-            //validação
-            let cep = document.querySelector('#cep').value;
-            
-            if (cep.length === 0) {
-                alert('Digite um CEP para consulta!')
-                return;
-            }
-
-            if (cep.length  < 8 || cep.length >= 9) {
-                alert('CEP inválido!')  
-                return;                                              
-            }
-            
-            
-            let url = `https://viacep.com.br/ws/${cep}/json/`;            
-            
-            fetch(url).then(function(response){
-                response.json().then(function(data) {                                        
-                    console.log(response)
-                    mostraDados(data);
-                })
-            });
-        }
-       
-        function mostraDados(dados) {
-            let consulta = document.querySelector('#consulta');
-
-            consulta.innerHTML = `<p>CEP: ${dados.cep}</p>
-                                   <p>Endereço: ${dados.logradouro}</p>
-                                   <p>DDD: ${dados.ddd}</p>
-                                   <p>Complemento: ${dados.complemento}</p>
-                                   <p>Bairro: ${dados.bairro}
-                                   <p>Cidade: ${dados.localidade} - ${dados.uf} </p>`
-        }
-    </script>
-    
+    <div id="consulta">        
+    </div>    
 </body>
 </html>
