@@ -10,15 +10,29 @@
 </head>
 <body>
     <center>
-    <img src="BuscaCep.png" width="400" height="300">
-    </center>   
-
+        <div>
+    <img src="BuscaCep.png" width="400" height="300" class="img">
+    </center>
+        </div>
+        
+    <center>
     <input type="text" placeholder="Digite seu CEP aqui" id="cep"/>
-
-    <button onclick="consultaCep()">Consultar CEP</button>    
+    
+    <button type="button" class="btn" onclick="consultaCep()">Consultar CEP</button>        
+    </center>
+    
 
     <!--Div onde fica o resultado-->
-    <div id="consulta">        
-    </div>    
+    
+    <center>
+    <div class="container">
+    <div id="consulta" align="left">
+    </div>
+    </div>
+</center>
+
+
+
+        
 </body>
 </html>
