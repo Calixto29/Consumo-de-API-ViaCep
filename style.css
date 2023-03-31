@@ -8,14 +8,17 @@
     box-shadow: 2px 2px chocolate;
     border-radius: 10px;
     font-size: medium;       
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
-
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .img {
     width: 30%;
-    height: auto;    
+    height: auto;
+    margin-bottom: 0px;
+      
 }
+
+
 
 #consulta {        
     padding-top: 10px;
@@ -67,5 +70,5 @@
 }
 
 body {
-    background-color: rgb(253, 245, 134);
+    background-color: rgb(221, 213, 96);
 }
